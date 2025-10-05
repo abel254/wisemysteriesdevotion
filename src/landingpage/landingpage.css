@@ -1,0 +1,351 @@
+/* .devotion-lp {
+    
+}
+*/
+.hero-section {
+  height: 75vh;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-image .overlay {
+  background-color: black;
+  opacity: 0.45;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.hero-heading {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-section .heading-info h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-section .heading-info h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 0 120px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .heading-info .sub-heading {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  padding: 0 4.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.heading-info .heading-par p {
+  margin: 0;
+}
+.heading-info .heading-par .everyday {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.heading-info .heading-par {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-info .heading-par .offers {
+  padding-left: 12rem;
+  text-align: start;
+  position: relative;
+}
+.heading-info .heading-par .offers::before {
+  content: "•";
+  position: absolute;
+  margin-left: -1.5rem;
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+}
+.heading-info .heading-par {
+  margin-bottom: 2rem;
+}
+.heading-info button {
+  background-color: #ffd700;
+  border: none;
+  color: black;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.heading-info button:hover {
+  background-color: #f5c400;
+}
+
+/* #Benefits Section */
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefits-section .experience-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 4rem 0;
+}
+.benefits-section .benefits-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.benefits-info .benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.benefits-info .benefits-image {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.benefits-info .benefits-image img {
+  height: 100%;
+  width: 90%;
+  object-fit: cover;
+}
+.benefits-info .benefits-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefits-info .benefits h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.benefits-info .benefits p {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 55%;
+  margin-top: 0;
+}
+
+.benefits-section .devotion-button:hover {
+  background-color: #f5c400;
+}
+
+/* #Final Section */
+.final-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.final-section .final-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.final-section p {
+  text-align: center;
+  font-style: italic;
+  width: 35%;
+  margin-bottom: 2rem;
+}
+.final-section .devotion-button {
+  background-color: #ffd700;
+  border: none;
+  color: black;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+.final-section .devotion-button:hover {
+  background-color: #f5c400;
+}
+
+/* #Footer Section */
+.footer-section {
+  border-top: 0.5px solid gray;
+}
+.footer-section p {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  /* #hero-section */
+  .hero-heading {
+    width: 70%;
+  }
+  .hero-section .heading-info h1 {
+    font-size: 1.8rem;
+  }
+  .hero-section .heading-info .sub-heading {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+  }
+  .hero-section .heading-info h4 {
+    font-size: 1.1rem;
+    padding: 0 70px;
+  }
+  .heading-info .heading-par p {
+    font-size: 0.8rem;
+  }
+  .heading-info button {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  /* #Benefits Section */
+  .benefits-section .experience-heading {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+  }
+  .benefits-section .benefits-info {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .benefits-info .benefits-image {
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .benefits-info .benefits h4 {
+    font-size: 1rem;
+  }
+  .benefits-info .benefits p {
+    font-size: 0.75rem;
+    text-align: center;
+    width: 80%;
+    margin-top: 0;
+  }
+
+  /* #Final Section */
+  .final-section .final-heading {
+    font-size: 1.3rem;
+  }
+  .final-section p {
+    font-size: 0.8rem;
+    width: 45%;
+  }
+  .final-section .devotion-button {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  /* #Footer section */
+  .footer-section p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+   /* #hero-section */
+   .hero-heading {
+    width: 60%;
+  }
+  .hero-section .heading-info h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section .heading-info .sub-heading {
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+  }
+  .hero-section .heading-info h4 {
+    font-size: 1.4rem;
+    padding: 0 70px;
+  }
+  .heading-info .heading-par p {
+    font-size: 0.85rem;
+  }
+  .heading-info button {
+    font-size: 0.8rem;
+    padding: 9px 15px;
+    border-radius: 5px;
+  }
+
+  /* #Benefits Section */
+  .benefits-section .experience-heading {
+    font-size: 1.4rem;
+    margin: 3.5rem 0;
+  }
+  .benefits-section .benefits-info {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .benefits-info .benefits-image {
+    height: 17vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .benefits-info .benefits h4 {
+    font-size: 1.2rem;
+  }
+  .benefits-info .benefits p {
+    font-size: 0.8rem;
+    text-align: center;
+    width: 80%;
+    margin-top: 0;
+  }
+
+  /* #Final Section */
+  .final-section .final-heading {
+    font-size: 1.5rem;
+  }
+  .final-section p {
+    font-size: 0.9rem;
+    width: 45%;
+  }
+  .final-section .devotion-button {
+    font-size: 0.8rem;
+    padding: 9px 15px;
+    border-radius: 5px;
+  }
+
+  /* #Footer section */
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+}
