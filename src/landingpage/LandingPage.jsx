@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./landingpage.css";
+import DevotionForm from "./devotional form/DevotionForm";
 
 const LandingPage = () => {
-
+   const [showForm, setShowForm] = useState(false);
   const currentYear = new Date().getFullYear()
 
   return (
@@ -25,7 +26,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <button className="devotion-button">
+            <button className="devotion-button" onClick={() => setShowForm(true)}>
               Get The Free 7-Day Devotional
             </button>
           </div>
@@ -74,7 +75,7 @@ const LandingPage = () => {
       <section className="final-section">
         <h4 className="final-heading">Don’t Miss This Free Devotional</h4>
         <p>Your struggle isn’t the end — it’s the preparation. Discover the mystery inside your wilderness.</p>
-        <button className="devotion-button">
+        <button className="devotion-button" onClick={() => setShowForm(true)}>
           Yes, Send Me My Free 7-Day Devotional
         </button>
       </section>
@@ -82,6 +83,8 @@ const LandingPage = () => {
       <section className="footer-section">
         <p>&copy; {currentYear} Wise Mysteries</p>
       </section>
+
+      <DevotionForm isOpen={showForm} onClose={() => setShowForm(false)} />
     </div>
   );
 };

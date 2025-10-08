@@ -1,0 +1,184 @@
+/* --- Overlay background --- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Popup container --- */
+.popup {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 380px;
+  max-width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.popup.slide-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.popup.slide-down {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* --- Close Button --- */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* --- Heading --- */
+.popup h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* --- Inputs --- */
+.popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+/* ============================================================
+   📱 RESPONSIVE MEDIA QUERIES
+   ============================================================ */
+
+/* --- Tablets (portrait & landscape): 768px – 1024px --- */
+@media screen and (max-width: 1024px) {
+  .popup {
+    width: 420px;
+    padding: 28px 20px;
+  }
+
+  .popup h2 {
+    font-size: 1.4rem;
+  }
+
+  .popup input {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Mobile phones: 480px – 767px --- */
+@media screen and (max-width: 767px) {
+  .popup {
+    width: 90%;
+    padding: 25px 18px;
+    border-radius: 15px;
+  }
+
+  .popup h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .popup input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .close-btn {
+    font-size: 18px;
+  }
+}
+
+/* --- Small phones: under 480px (like iPhone SE or older Androids) --- */
+@media screen and (max-width: 480px) {
+  .popup {
+    width: 72%;
+    padding: 20px 15px;
+  }
+
+  .popup h2 {
+    font-size: 1.1rem;
+  }
+
+  .popup input {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    font-size: 0.85rem;
+    padding: 9px;
+  }
+}
