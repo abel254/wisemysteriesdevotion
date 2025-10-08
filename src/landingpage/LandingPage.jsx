@@ -26,7 +26,7 @@ const LandingPage = () => {
             </div>
 
             <button className="devotion-button">
-              Send Me My Free 7-Day Devotional
+              Get The Free 7-Day Devotional
             </button>
           </div>
         </div>
