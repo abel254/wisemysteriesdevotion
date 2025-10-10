@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./devotionform.css"; // Import the CSS file
+import axios from "axios";
 
 const DevotionForm = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({
-    fullname: "",
-    gmail: "",
+  const users = {
+    name: "",
+    email: "",
     address: "",
-  });
+  };
+  const [user, setUser] = useState(users);
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -20,20 +22,36 @@ const DevotionForm = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("✅ Thank you! Your devotional will be sent to your Gmail.");
-    onClose();
+    await axios
+      .post("http://localhost:8000/api/user", user)
+      .then((response) => {
+        alert("✅ Thank you! Your 7-day's devotional will be sent to your Gmail.");
+        onClose();
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   };
 
   if (!isOpen) return null;
 
+
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("overlay")) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={`overlay ${isVisible ? "show" : ""}`}>
+    <div
+      className={`overlay ${isVisible ? "show" : ""}`}
+      onClick={handleOverlayClick}
+    >
       <div className={`popup ${isVisible ? "slide-up" : "slide-down"}`}>
         <button className="close-btn" onClick={onClose}>
           ✕
@@ -44,31 +62,31 @@ const DevotionForm = ({ isOpen, onClose }) => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            name="fullname"
+            name="name"
             placeholder="Full Names"
-            value={formData.fullname}
+            value={setUser.fullname}
             onChange={handleChange}
             required
           />
           <input
             type="email"
-            name="gmail"
+            name="email"
             placeholder="Gmail"
-            value={formData.gmail}
+            value={setUser.gmail}
             onChange={handleChange}
             required
           />
           <input
             type="text"
             name="address"
-            placeholder="Address"
-            value={formData.address}
+            placeholder="Country"
+            value={setUser.address}
             onChange={handleChange}
             required
           />
 
           <button type="submit" className="submit-btn">
-            Get the Free Devotional
+            Get the Free 7-day Devotional
           </button>
         </form>
       </div>
