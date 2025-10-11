@@ -9,7 +9,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
     address: "",
   };
   const [user, setUser] = useState(users);
-
+  const [loading, setLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -27,19 +27,26 @@ const DevotionForm = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // 👈 start loading
     await axios
       .post("http://localhost:8000/api/user", user)
       .then((response) => {
-        alert("✅ Thank you! Your 7-day's devotional will be sent to your Gmail.");
+        alert(
+          "✅ Thank you! Your 7-day's devotional will be sent to your Gmail."
+        );
         onClose();
       })
       .catch((error) => {
-        console.log(error)
+        console.error(error);
+          // Any other error (client, validation, etc.)
+          alert("⚠️ Something went wrong. Please try again.");
       })
+      .finally(() => {
+        setLoading(false); //  stop loading (always runs)
+      });
   };
 
   if (!isOpen) return null;
-
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("overlay")) {
@@ -85,8 +92,16 @@ const DevotionForm = ({ isOpen, onClose }) => {
             required
           />
 
-          <button type="submit" className="submit-btn">
-            Get the Free 7-day Devotional
+          <button
+            type="submit"
+            className={`submit-btn &{loading ? "loading":""}`}
+            disabled={loading}
+          >
+            {loading ? (
+              <div className="spinner"></div>
+            ) : (
+              "Get the Free 7-day Devotional"
+            )}
           </button>
         </form>
       </div>
