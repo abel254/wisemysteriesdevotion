@@ -28,7 +28,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 }
 .hero-heading {
   color: white;
@@ -58,7 +58,7 @@
 }
 
 .hero-section .heading-info .sub-heading {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   margin-top: 0;
   padding: 0 4.5rem;

@@ -5,15 +5,18 @@
   font-family: Arial, sans-serif;
 }
 
-.upload-container, .pdf-list-container {
+.upload-container,
+.pdf-list-container,
+.send-email-container {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
 
-.upload-form input, .upload-form button {
+.upload-form input,
+.upload-form button {
   display: block;
   width: 100%;
   margin-top: 10px;
@@ -32,6 +35,26 @@
 
 .upload-form button:hover {
   background: #0056b3;
+}
+
+.send-email-btn {
+  margin-top: "20px";
+  color: "white";
+  padding: "10px 16px";
+  border: "none";
+  cursor: "pointer";
+  background-color: #ffd700;
+  border: none;
+  color: black;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+.send-email-btn:hover{
+  background-color: #f5c400;
 }
 
 .pdf-list {

@@ -8,6 +8,9 @@ const AdminPage = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
+  // Email sending state
+  const [emailSending, setEmailSending] = useState(false);
+
   // PDF List State
   const [pdfs, setPdfs] = useState([]);
   const [fetching, setFetching] = useState(true);
@@ -70,6 +73,28 @@ const AdminPage = () => {
     }
   };
 
+  // 📨 Handle bulk email sending
+  const handleSendEmails = async () => {
+    if (!window.confirm("Are you sure you want to send emails to all users?"))
+      return;
+
+    try {
+      setEmailSending(true);
+      setMessage("");
+
+      const response = await axios.post(
+        "http://localhost:8000/api/send-bulk-email"
+      );
+
+      setMessage(`✅ ${response.data.message || "Emails sent successfully!"}`);
+    } catch (error) {
+      console.error(error);
+      setMessage("❌ Failed to send emails. Please try again later.");
+    } finally {
+      setEmailSending(false);
+    }
+  };
+
   return (
     <div className="admin-container">
       <div className="upload-container">
@@ -100,6 +125,18 @@ const AdminPage = () => {
 
           {message && <p className="upload-message">{message}</p>}
         </form>
+      </div>
+
+      <div className="send-email-container">
+         {/* 📨 Send Email Button */}
+        <button
+          className="send-email-btn"
+          onClick={handleSendEmails}
+          disabled={emailSending}
+          
+        >
+          {emailSending ? "Sending Emails..." : "📬 Send Email to All Users"}
+        </button>
       </div>
 
       <div className="pdf-list-container">
