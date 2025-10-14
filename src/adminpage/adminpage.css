@@ -1,0 +1,78 @@
+.admin-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.upload-container,
+.pdf-list-container,
+.send-email-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.upload-form input,
+.upload-form button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.upload-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-form button:hover {
+  background: #0056b3;
+}
+
+.send-email-btn {
+  margin-top: "20px";
+  color: "white";
+  padding: "10px 16px";
+  border: "none";
+  cursor: "pointer";
+  background-color: #ffd700;
+  border: none;
+  color: black;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+.send-email-btn:hover{
+  background-color: #f5c400;
+}
+
+.pdf-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pdf-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.download-btn {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  text-decoration: underline;
+}

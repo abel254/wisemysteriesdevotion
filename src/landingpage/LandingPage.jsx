@@ -16,7 +16,7 @@ const LandingPage = () => {
               Discover the hidden biblical patterns of how God uses wilderness,
               crisis, and trials to prepare you for your destiny.
             </p>
-            <h4>Get you FREE 7-Day Devotional Wise Mysteries</h4>
+            <h4>Get your FREE 7-Day Devotional Wise Mysteries</h4>
             <div className="heading-par">
               <p className="everyday">Every day you'll receive:</p>
               <div className="offers-par">
@@ -33,7 +33,7 @@ const LandingPage = () => {
         </div>
         <div className="hero-image">
           <div className="overlay"></div>
-          <img src="35.png" alt="" />
+          <img src="35.webp" alt="" />
         </div>
       </section>
 
