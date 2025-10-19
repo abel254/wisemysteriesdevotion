@@ -29,7 +29,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
     e.preventDefault();
     setLoading(true); // 👈 start loading
     await axios
-      .post("http://localhost:8000/api/user", user)
+      .post("https://wisemysteriesserver-swl1.vercel.app/api/user", user)
       .then((response) => {
         alert(
           "✅ Thank you! Your 7-day's devotional will be sent to your Gmail."
