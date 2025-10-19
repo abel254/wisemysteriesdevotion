@@ -18,7 +18,7 @@ const AdminPage = () => {
   // Fetch all uploaded PDFs
   const fetchPdfs = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api");
+      const response = await axios.get("https://wisemysteriesserver-swl1.vercel.app/api");
       setPdfs(response.data);
     } catch (error) {
       console.error("Error fetching PDFs:", error);
@@ -51,7 +51,7 @@ const AdminPage = () => {
       setLoading(true);
       setMessage("");
       const response = await axios.post(
-        "http://localhost:8000/api/upload",
+        "https://wisemysteriesserver-swl1.vercel.app/api/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -83,7 +83,7 @@ const AdminPage = () => {
       setMessage("");
 
       const response = await axios.post(
-        "http://localhost:8000/api/send-bulk-email"
+        "https://wisemysteriesserver-swl1.vercel.app/api/send-bulk-email"
       );
 
       setMessage(`✅ ${response.data.message || "Emails sent successfully!"}`);
@@ -152,7 +152,7 @@ const AdminPage = () => {
               <li key={pdf._id} className="pdf-item">
                 <h3>{pdf.title}</h3>
                 <a
-                  href={`http://localhost:8000/${pdf.pdfPath}`}
+                  href={`https://wisemysteriesserver-swl1.vercel.app/${pdf.pdfPath}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="download-btn"
