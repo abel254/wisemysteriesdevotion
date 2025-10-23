@@ -28,22 +28,19 @@ const DevotionForm = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // 👈 start loading
-    await axios
-      .post("https://wisemysteriesserver-swl1.vercel.app/api/user", user)
-      .then((response) => {
-        alert(
-          "✅ Thank you! Your 7-day's devotional will be sent to your Gmail."
-        );
-        onClose();
-      })
-      .catch((error) => {
-        console.error(error);
-          // Any other error (client, validation, etc.)
-          alert("⚠️ Something went wrong. Please try again.");
-      })
-      .finally(() => {
-        setLoading(false); //  stop loading (always runs)
-      });
+    try {
+      await axios.post("http://localhost:8000/api/user", user);
+      alert(
+        "✅ Thank you! Your 7-day's devotional will be sent to your Gmail."
+      );
+      onClose();
+      setUser(users);
+    } catch (error) {
+      console.error(error);
+      alert("⚠️ Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -71,7 +68,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
             type="text"
             name="name"
             placeholder="Full Names"
-            value={setUser.fullname}
+            value={user.name}
             onChange={handleChange}
             required
           />
@@ -79,7 +76,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
             type="email"
             name="email"
             placeholder="Gmail"
-            value={setUser.gmail}
+            value={user.email}
             onChange={handleChange}
             required
           />
@@ -87,14 +84,14 @@ const DevotionForm = ({ isOpen, onClose }) => {
             type="text"
             name="address"
             placeholder="Country"
-            value={setUser.address}
+            value={user.address}
             onChange={handleChange}
             required
           />
 
           <button
             type="submit"
-            className={`submit-btn &{loading ? "loading":""}`}
+            className={`submit-btn ${loading ? "loading":""}`}
             disabled={loading}
           >
             {loading ? (
