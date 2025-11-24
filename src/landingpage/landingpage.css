@@ -9,7 +9,7 @@
   position: absolute;
   margin-left: 19rem;
   bottom: 8rem;
-  padding-right: 30rem;
+  padding-right: 25rem;
 }
 .hero-section .hero-content h1 {
   color: white;
@@ -85,7 +85,6 @@
 /* E-BOOK SECTION */
 .ebook-section {
   height: 85vh;
-  width: auto;
   display: flex;
   margin: 4rem 3rem;
 }
@@ -172,8 +171,7 @@
 .reminder-section .reminder-heading {
   text-align: center;
   font-size: 1.6rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 .reminder-section p {
   text-align: center;
@@ -197,8 +195,7 @@
   background-color: #f5c400;
 }
 
-
-/* #Footer Section */
+/* FOOTER SECTION*/
 .footer-section {
   height: 10vh;
   background-color: rgb(23, 23, 23);
@@ -213,75 +210,97 @@
 
 @media (max-width: 576px) {
   /* #hero-section */
-  .hero-heading {
-    width: 70%;
+  .hero-section .hero-content {
+    margin-left: 4rem;
+    padding-right: 5rem;
+    bottom: 14rem;
   }
-  .hero-section .heading-info h1 {
-    font-size: 1.4rem;
+  .hero-section .hero-content h1 {
+    font-size: 1.6rem;
   }
-  .hero-section .heading-info .sub-heading {
-    font-size: 0.65rem;
+  .hero-section .hero-content .sub-heading {
+    font-size: 0.75rem;
     line-height: 1.2;
-    padding: 0 0.6rem;
     margin-bottom: 3rem;
   }
-  .hero-section .heading-info h4 {
-    font-size: 0.9rem;
-    padding: 0 20px;
+  .hero-section .hero-content .free-chapter {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
   }
-  .heading-info .heading-par p {
-    font-size: 0.65rem;
-  }
-  .heading-info .heading-par .offers {
-    padding-left: 7.5rem;
-  }
-  .heading-info button {
-    font-size: 0.65rem;
+
+  .hero-section .hero-content button {
+    font-size: 0.68rem;
     padding: 7px 11px;
     border-radius: 5px;
   }
-  .heading-info .heading-par .offers::before {
-    margin-left: -1.1rem;
-    font-size: 0.65rem;
+  
+  /* e-book section */
+  .ebook-section {
+    margin: 4rem 1.7rem;
+    flex-direction: column;
+    height: auto;
+  }
+  .ebook-section .ebook-left {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .ebook-section .ebook-left .ebook-content {
+    margin: 0 2.5rem;
+  }
+  .ebook-section .ebook-left .ebook-content h3 {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .ebook-section .ebook-left .ebook-content p {
+    font-size: 0.69rem;
+    line-height: 0.9rem;
+  }
+  .ebook-section .ebook-left .ebook-content .offer-price {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
   }
 
-  /* #Benefits Section */
-  .benefits-section .experience-heading {
-    font-size: 1rem;
-    margin: 2.5rem 0;
-  }
-  .benefits-section .benefits-info {
-    width: 80%;
-    margin-bottom: 2rem;
-  }
-  .benefits-info .benefits-image {
-    height: 8.5vh;
-  }
-  .benefits-info .benefits h4 {
-    font-size: 0.9rem;
-  }
-  .benefits-info .benefits p {
-    font-size: 0.6rem;
-    text-align: center;
-    width: 95%;
-    margin-top: 0;
+  .ebook-section .ebook-left .ebook-content .old-price {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
   }
 
-  /* #Final Section */
-  .final-section .final-heading {
-    font-size: 1rem;
+  .ebook-section .ebook-left .ebook-content .ebook-link {
+    padding: 0.8rem 2rem;
+    font-size: 0.82rem;
+    padding: 0.5rem 1.5rem;
   }
-  .final-section p {
-    font-size: 0.7rem;
+
+  .ebook-section .ebook-right {
+    width: 100%;
+  }
+
+  .ebook-section .ebook-right img {
+    width: 75%;
+    height: auto;
+    padding: 4rem;
+  }
+
+  /* reminder section */
+  .reminder-section {
+    height: 60vh;
+  }
+  .reminder-section .reminder-heading {
+    font-size: 1.15rem;
+  }
+  .reminder-section p {
+    font-size: 0.72rem;
     width: 70%;
   }
-  .final-section .devotion-button {
+  .reminder-section .devotion-button {
     font-size: 0.65rem;
     padding: 7px 11px;
-    border-radius: 5px;
   }
 
   /* #Footer section */
+  .footer-section {
+    height: 6vh;
+  }
   .footer-section p {
     font-size: 0.65rem;
   }
@@ -289,71 +308,193 @@
 
 @media (min-width: 577px) and (max-width: 768px) {
   /* #hero-section */
-  .hero-heading {
-    width: 60%;
+  .hero-section .hero-content {
+    margin-left: 6rem;
+    padding-right: 12rem;
+    bottom: 14rem;
   }
-  .hero-section .heading-info h1 {
-    font-size: 2.5rem;
+  .hero-section .hero-content h1 {
+    font-size: 2rem;
   }
-  .hero-section .heading-info .sub-heading {
-    font-size: 0.9rem;
+  .hero-section .hero-content .sub-heading {
+    font-size: 0.82rem;
     line-height: 1.2;
-    padding: 0 2rem;
     margin-bottom: 3rem;
   }
-  .hero-section .heading-info h4 {
-    font-size: 1.4rem;
-    padding: 0 70px;
+  .hero-section .hero-content .free-chapter {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
-  .heading-info .heading-par p {
-    font-size: 0.85rem;
-  }
-  .heading-info button {
-    font-size: 0.8rem;
-    padding: 9px 15px;
+  .hero-section .hero-content button {
+    font-size: 0.68rem;
+    padding: 7px 11px;
     border-radius: 5px;
   }
 
-  /* #Benefits Section */
-  .benefits-section .experience-heading {
-    font-size: 1.4rem;
-    margin: 3.5rem 0;
+  /* e-book section */
+  .ebook-section {
+    margin: 4rem 2.5rem;
+    flex-direction: column;
+    height: auto;
   }
-  .benefits-section .benefits-info {
-    width: 80%;
-    margin-bottom: 2rem;
-  }
-  .benefits-info .benefits-image {
-    height: 17vh;
+  .ebook-section .ebook-left {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    padding: 2rem 0;
   }
-  .benefits-info .benefits h4 {
-    font-size: 1.2rem;
+  .ebook-section .ebook-left .ebook-content {
+    margin: 0 6rem;
   }
-  .benefits-info .benefits p {
-    font-size: 0.8rem;
-    text-align: center;
-    width: 80%;
-    margin-top: 0;
+  .ebook-section .ebook-left .ebook-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+  }
+  .ebook-section .ebook-left .ebook-content p {
+    font-size: 0.72rem;
+    line-height: 1rem;
+  }
+  .ebook-section .ebook-left .ebook-content .offer-price {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
   }
 
-  /* #Final Section */
-  .final-section .final-heading {
-    font-size: 1.5rem;
-  }
-  .final-section p {
+  .ebook-section .ebook-left .ebook-content .old-price {
     font-size: 0.9rem;
-    width: 45%;
+    margin-bottom: 1rem;
   }
-  .final-section .devotion-button {
-    font-size: 0.8rem;
-    padding: 9px 15px;
-    border-radius: 5px;
+
+  .ebook-section .ebook-left .ebook-content .ebook-link {
+    padding: 0.8rem 2rem;
+    font-size: 0.89rem;
+    padding: 0.7rem 1.7rem;
+  }
+
+  .ebook-section .ebook-right {
+    width: 100%;
+  }
+
+  .ebook-section .ebook-right img {
+    width: 70%;
+    height: auto;
+    padding: 4rem;
+  }
+
+  /* reminder section */
+  .reminder-section {
+    height: 60vh;
+  }
+  .reminder-section .reminder-heading {
+    font-size: 1.25rem;
+  }
+  .reminder-section p {
+    font-size: 0.82rem;
+    width: 60%;
+  }
+  .reminder-section .devotion-button {
+    font-size: 0.68rem;
+    padding: 8px 12px;
   }
 
   /* #Footer section */
+  .footer-section {
+    height: 7vh;
+  }
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px){
+/* #hero-section */
+  .hero-section .hero-content {
+    margin-left: 9rem;
+    padding-right: 22rem;
+    bottom: 14rem;
+  }
+  .hero-section .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section .hero-content .sub-heading {
+    font-size: 0.92rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+  }
+  .hero-section .hero-content .free-chapter {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .hero-section .hero-content button {
+    font-size: 0.78rem;
+    padding: 7px 11px;
+    border-radius: 5px;
+  }
+
+  /* e-book section */
+  .ebook-section {
+    margin: 4rem 3rem;
+    flex-direction: column;
+    height: auto;
+  }
+  .ebook-section .ebook-left {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .ebook-section .ebook-left .ebook-content {
+    margin: 0 6rem;
+  }
+  .ebook-section .ebook-left .ebook-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+  }
+  .ebook-section .ebook-left .ebook-content p {
+    font-size: 0.82rem;
+    line-height: 1.1rem;
+  }
+  .ebook-section .ebook-left .ebook-content .offer-price {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .ebook-section .ebook-left .ebook-content .old-price {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .ebook-section .ebook-left .ebook-content .ebook-link {
+    padding: 0.8rem 2rem;
+    font-size: .9rem;
+  }
+
+  .ebook-section .ebook-right {
+    width: 100%;
+  }
+
+  .ebook-section .ebook-right img {
+    width: 70%;
+    height: auto;
+    padding: 4rem;
+  }
+
+  /* reminder section */
+  .reminder-section {
+    height: 60vh;
+  }
+  .reminder-section .reminder-heading {
+    font-size: 1.4rem;
+  }
+  .reminder-section p {
+    font-size: 0.92rem;
+    width: 50%;
+  }
+  .reminder-section .devotion-button {
+    font-size: 0.78rem;
+    padding: 7px 11px;
+  }
+
+  /* #Footer section */
+  .footer-section {
+    height: 7vh;
+  }
   .footer-section p {
     font-size: 0.9rem;
   }
