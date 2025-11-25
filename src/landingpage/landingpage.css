@@ -152,6 +152,8 @@
   height: 70%;
 }
 
+
+
 /* REMINDER SECTION */
 .reminder-section {
   height: 70vh;
@@ -215,7 +217,7 @@
   }
   .hero-section .hero-content {
     margin-left: 4rem;
-    padding-right: 5rem;
+    padding-right: 3.8rem;
     bottom: 14rem;
   }
   .hero-section .hero-content h1 {
