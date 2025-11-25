@@ -36,6 +36,12 @@ const DevotionForm = ({ isOpen, onClose }) => {
       onClose();
       setUser(users);
     } catch (error) {
+      if(error.response && error.response.status === 400 && error.response.data.message === "User already exists"){
+        alert("⚠️ User already exists. Please use a different email.");
+        return;
+      } else {
+
+      }
       console.error(error);
       alert("⚠️ Something went wrong. Please try again.");
     } finally {
