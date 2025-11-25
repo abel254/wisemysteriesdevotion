@@ -210,6 +210,9 @@
 
 @media (max-width: 576px) {
   /* #hero-section */
+  .hero-section{
+    height: 80vh;
+  }
   .hero-section .hero-content {
     margin-left: 4rem;
     padding-right: 5rem;
@@ -233,6 +236,9 @@
     padding: 7px 11px;
     border-radius: 5px;
   }
+  .hero-section .right img {
+  object-fit: cover;
+}
   
   /* e-book section */
   .ebook-section {
