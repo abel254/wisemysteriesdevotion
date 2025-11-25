@@ -31,7 +31,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
     try {
       await axios.post("https://wisemysteriesserver-swl1.vercel.app/api/user", user);
       alert(
-        "✅ Thank you! Your 7-day's devotional will be sent to your Gmail."
+        "✅ Thank you! Your free chapter will be sent to your Gmail."
       );
       onClose();
       setUser(users);
@@ -61,7 +61,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
           ✕
         </button>
 
-        <h2>Get Your Free 7-Day Devotional</h2>
+        <h2>Get Your Free Chapter</h2>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -97,7 +97,7 @@ const DevotionForm = ({ isOpen, onClose }) => {
             {loading ? (
               <div className="spinner"></div>
             ) : (
-              "Get the Free 7-day Devotional"
+              "Get the Free Chapter"
             )}
           </button>
         </form>
